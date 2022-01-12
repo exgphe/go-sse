@@ -1,4 +1,4 @@
-module github.com/subchord/go-sse
+module github.com/exgphe/go-sse
 
 go 1.17
 

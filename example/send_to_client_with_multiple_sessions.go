@@ -4,7 +4,7 @@ package main
 
 import (
 	"fmt"
-	net "github.com/subchord/go-sse"
+	net "github.com/exgphe/go-sse"
 	"log"
 	"math/rand"
 	"net/http"

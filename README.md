@@ -1,4 +1,4 @@
-![Go](https://github.com/SubChord/go-sse/workflows/Go/badge.svg?branch=master)
+![Go](https://github.com/exgphe/go-sse/workflows/Go/badge.svg?branch=master)
 
 # go-sse
 Basic implementation of SSE in golang.
@@ -8,7 +8,7 @@ The server-side implementation has been battle-tested while the client-side is u
 Code examples can be found in the `example` folder.
 # Install
 ```bash
-go get github.com/subchord/go-sse@master
+go get github.com/exgphe/go-sse@master
 ```
 # Server side SSE
 1. Create a new broker and pass `optional` headers that should be sent to the client.

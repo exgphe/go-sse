@@ -1,10 +1,11 @@
+//go:build connect_custom_interval
 // +build connect_custom_interval
 
 package main
 
 import (
 	"fmt"
-	"github.com/subchord/go-sse"
+	"github.com/exgphe/go-sse"
 	"log"
 	"net/http"
 	"strconv"

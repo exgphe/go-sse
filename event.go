@@ -68,7 +68,7 @@ func (h HeartbeatEvent) GetData() string {
 
 func (h HeartbeatEvent) Prepare() []byte {
 	var data bytes.Buffer
-	data.WriteString(fmt.Sprint(": heartbeat\n"))
+	data.WriteString(fmt.Sprint(": This is a heartbeat message.\n"))
 	data.WriteString("\n")
 	return data.Bytes()
 }
