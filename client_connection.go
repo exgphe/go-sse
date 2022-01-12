@@ -53,8 +53,22 @@ func (c *ClientConnection) Send(event Event) {
 	c.msg <- bytes
 }
 
+func newTicker(repeat time.Duration) *time.Ticker {
+	ticker := time.NewTicker(repeat)
+	oc := ticker.C
+	nc := make(chan time.Time, 1)
+	go func() {
+		nc <- time.Now()
+		for tm := range oc {
+			nc <- tm
+		}
+	}()
+	ticker.C = nc
+	return ticker
+}
+
 func (c *ClientConnection) serve(interval time.Duration, onClose func()) {
-	heartBeat := time.NewTicker(interval)
+	heartBeat := newTicker(interval)
 
 writeLoop:
 	for {
